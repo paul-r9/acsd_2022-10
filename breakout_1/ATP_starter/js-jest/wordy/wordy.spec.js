@@ -5,6 +5,8 @@ describe('Wordy', () => {
     expect(answer('What is 5?')).toEqual(5);
   });
 
+// Paul     
+
   xtest('addition', () => {
     expect(answer('What is 1 plus 1?')).toEqual(2);
   });

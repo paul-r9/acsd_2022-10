@@ -16,6 +16,6 @@ public class GildedRoseTest {
         sut.updateQuality();
 
         // Assert
-        assertEquals("fixme", sut.items[0].name);
+//        assertEquals("wrong name", sut.items[0].name);
     }
 }
