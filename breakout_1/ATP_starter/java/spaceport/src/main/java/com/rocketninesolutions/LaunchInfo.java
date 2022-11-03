@@ -1,9 +1,10 @@
 package com.rocketninesolutions;
 
 import java.time.LocalDateTime;
+import java.util.Comparator;
 import java.util.UUID;
 
-public class LaunchInfo {
+public class LaunchInfo implements Comparable {
 
     private UUID launchID;
     private String destination;
@@ -11,6 +12,11 @@ public class LaunchInfo {
     private LocalDateTime time;
     private String launchPad;
     private LaunchStatus status;
+
+    @Override
+    public int compareTo(Object o) {
+        return getDestination().compareTo(((LaunchInfo)o).getDestination());
+    }
 
     public enum LaunchStatus {
         Aok, Delayed, Scrubbed, Launched
